@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IntroAXamarin"
+             x:Class="IntroAXamarin.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Vertical"
+                       Spacing="15"
+                 BackgroundColor="CadetBlue">
+        <Label Text="Répertoire" 
+           VerticalOptions="Start" 
+           HorizontalOptions="Center" 
+           FontSize="Large"
+           TextColor="Black"
+           Font="Bold,20"/>
+        <Label Text="Nom du contact :" />
+        <Entry x:Name="nomContact" Text="Aucun" Keyboard="Text" />
+        <Label Text="Numéro du contact :" />
+        <Entry x:Name="numeroContact" Text="Aucun" Keyboard="Numeric" />
+
+        <Button x:Name="boutonValider" Text="Ajouter" Clicked="ajoutBTClicked"/>
+        <Label x:Name="confirmLabel" Text="" HorizontalTextAlignment="Center" />
+
+        <ListView x:Name="ContactView">
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nom}"
+                                TextColor="#f35e20" />
+                                <Label Text="{Binding Numero}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="boutonAide" Text="Aide" Clicked="OnButtonAideClicked"/>
+    </StackLayout>
+
+</ContentPage>

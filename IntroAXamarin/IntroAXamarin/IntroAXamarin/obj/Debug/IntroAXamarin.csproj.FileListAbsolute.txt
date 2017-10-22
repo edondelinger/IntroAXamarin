@@ -1,0 +1,17 @@
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\IntroAXamarin.dll
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\IntroAXamarin.pdb
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Core.dll
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Platform.dll
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Core.pdb
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Core.xml
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.csprojResolveAssemblyReference.cache
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.csproj.CoreCompileInputs.cache
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.MainPage.xaml.g.cs
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.App.xaml.g.cs
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.dll
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.pdb
+D:\eric\travail\2017-2018\SLAM45\xamarin\code\IntroAXamarin\IntroAXamarin\IntroAXamarin\IntroAXamarin\obj\Debug\IntroAXamarin.Aide.xaml.g.cs
