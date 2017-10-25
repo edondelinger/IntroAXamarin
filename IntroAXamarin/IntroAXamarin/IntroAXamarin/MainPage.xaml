@@ -7,7 +7,7 @@
     <StackLayout VerticalOptions="FillAndExpand"
                        HorizontalOptions="FillAndExpand"
                        Orientation="Vertical"
-                       Spacing="15"
+                       Spacing="2"
                  BackgroundColor="CadetBlue">
         <Label Text="Répertoire" 
            VerticalOptions="Start" 
@@ -16,35 +16,23 @@
            TextColor="Black"
            Font="Bold,20"/>
         <Label Text="Nom du contact :" />
-        <Entry x:Name="nomContact" Text="Aucun" Keyboard="Text" />
+        <Entry x:Name="nomContact" Text="Dondelinger" Keyboard="Text" />
+        <Label Text="Prénom du contact :" />
+        <Entry x:Name="prenomContact" Text="Eric" Keyboard="Text" />
+        <Label Text="Email du contact :" />
+        <Entry x:Name="mailContact" Text="edondelinger@gmail.com" Keyboard="Text" />
         <Label Text="Numéro du contact :" />
-        <Entry x:Name="numeroContact" Text="Aucun" Keyboard="Numeric" />
+        <Entry x:Name="numeroContact" Text="0632313231" Keyboard="Numeric" />
+        <Label x:Name="emplacementLabel" Text="0;0" />
+        <Button x:Name="boutonCarte" Text="Emplacement" Clicked="OnButtonCarteClicked"/>
 
         <Button x:Name="boutonValider" Text="Ajouter" Clicked="ajoutBTClicked"/>
         <Label x:Name="confirmLabel" Text="" HorizontalTextAlignment="Center" />
 
-        <ListView x:Name="ContactView">
-            <ListView.ItemTemplate>
-
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Nom}"
-                                TextColor="#f35e20" />
-                                <Label Text="{Binding Numero}"
-                                HorizontalOptions="EndAndExpand"
-                                TextColor="#503026" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Button x:Name="chercherRepertoire" Text="Rechercher" Clicked="OnButtonChercherClicked"/>
 
         <Button x:Name="boutonAide" Text="Aide" Clicked="OnButtonAideClicked"/>
+        
     </StackLayout>
 
 </ContentPage>

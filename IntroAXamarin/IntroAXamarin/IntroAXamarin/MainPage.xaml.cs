@@ -8,19 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Reflection;
+using Plugin.Geolocator;
 
 namespace IntroAXamarin
 {
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<Contact> lesContacts;
+        public static ObservableCollection<Contact> lesContacts;
         public static int nbContacts;
+        public static 
 
         public MainPage()
         {
             MainPage.nbContacts = 0;
             InitializeComponent();
-            lesContacts = new ObservableCollection<Contact>();
+            MainPage.lesContacts = new ObservableCollection<Contact>();
 
             /*
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
@@ -36,14 +38,21 @@ namespace IntroAXamarin
 
             // DependencyService.Get<ISaveAndLoad>().SaveText("temp.txt", "Eric;0621211212");
 
-            ContactView.ItemsSource = lesContacts;
+            
 
-            ContactView.ItemSelected += ContactView_ItemSelected;         
+            var position = locator.GetPositionAsync(timeoutMilliseconds: 10000);
+
+            Console.WriteLine("Position Status: {0}", position.Timestamp);
+            Console.WriteLine("Position Latitude: {0}", position.Latitude);
+            Console.WriteLine("Position Longitude: {0}", position.Longitude);
         }
 
         void ajoutBTClicked(object sender, EventArgs e)
         {
-            Contact c = new Contact(nomContact.Text, numeroContact.Text);
+            string[] coords = emplacementLabel.Text.Split(';');
+            double lat = Double.Parse(coords[0]);
+            double lon = Double.Parse(coords[1]);
+            Contact c = new Contact(nomContact.Text, prenomContact.Text, mailContact.Text, numeroContact.Text, lat, lon);
             lesContacts.Add(c);
             confirmLabel.Text = String.Format("{0} avec le numéro {1}",
                                        nomContact.Text, numeroContact.Text);
@@ -60,9 +69,9 @@ namespace IntroAXamarin
         public void saveContacts()
         {
             string toSaveText = "";
-            foreach(Contact c in this.lesContacts)
+            foreach(Contact c in MainPage.lesContacts)
             {
-                toSaveText += c.Nom + ";" + c.Numero + "\n";
+                toSaveText += c.Nom + ";" + c.Prenom + ";" + c.Email + ";" + c.Numero + ";" +c.Latitude + ";" + c.Longitude + "\n";
             }
             DependencyService.Get<ISaveAndLoad>().SaveText("temp.txt", toSaveText);
         }
@@ -78,7 +87,7 @@ namespace IntroAXamarin
                 if (item.Length > 0)
                 {
                     string[] leContact = item.Split(';');
-                    Contact c = new Contact(leContact[0], leContact[1]);
+                    Contact c = new Contact(leContact[0], leContact[1], leContact[2], leContact[3], Double.Parse(leContact[4]), Double.Parse(leContact[5]));
                     lesContacts.Add(c);
                 }
             }
@@ -89,9 +98,28 @@ namespace IntroAXamarin
             Navigation.PushAsync(new Aide());
         }
 
-        private void ContactView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        void OnButtonCarteClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Alerte", "Vous avez choisi un élément de la liste", "OK");
+            Navigation.PushAsync(new Carte());
         }
+
+        void OnButtonChercherClicked(object sender, EventArgs e)
+        {
+
+            Navigation.PushAsync(new RepertoireListe());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if(Carte.latitude != 0.0)
+            {
+                emplacementLabel.Text = Carte.latitude + ";" + Carte.longitdude;
+                //DisplayAlert("Alerte", "Retour ici", "OK");
+            }
+            System.Diagnostics.Debug.WriteLine("*****Here*****");
+            
+        }
+
     }
 }
